@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "8 Mars 2025 - La journée internationale des droits de la femme",
+    "title": "8 Mars 2026 à Tours (Indre et Loire)",
     "tagline": "Créez votre identité digitale"
   },
   "splash": {
@@ -79,15 +79,15 @@
     "welcome": "Bienvenue chez ETERNELLES",
     "spotlight": "En vedette",
     "spotlightSubtitle": "Une sélection de talents émergents et établis.",
-    "events": "Nos Evenements",
-    "eventsSubtitle": "Les défilés, shows et castings incontournables.",
-    "creators": "Nos Createurs",
-    "creatorsSubtitle": "Designers, directeurs artistiques et studios.",
-    "talents": "Nos Talents",
-    "talentsSubtitle": "Les talents qui définissent la saison.",
-    "universe": "L’univers ETERNELLES",
-    "universeCopy": "Au-delà d’un book, ETERNELLES relie vos castings, vos partenaires vérifiés et une présence digitale durable.",
-    "universeCta": "Créer mon book",
+    "events": "Basketball",
+    "eventsSubtitle": "La femme en mouvement",
+    "creators": "Danse et Spectacles",
+    "creatorsSubtitle": "La femme au rythme de son corps",
+    "talents": "Défile de Mode",
+    "talentsSubtitle": "La femme sous toutes ses couleurs",
+    "universe": "",
+    "universeCopy": "",
+    "universeCta": "",
     "discoverTalents": "Découvrez nos talents",
     "discoverSubtitle": "Rencontrez les visages qui façonneront la prochaine saison.",
     "discoverCta": "Explorer la sélection"

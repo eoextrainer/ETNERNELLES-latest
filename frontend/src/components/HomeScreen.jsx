@@ -17,14 +17,9 @@ const buildEmbedUrl = (url) => {
   return `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&fs=0&loop=1&playlist=${id}`;
 };
 
-const VideoCarousel = ({ title, subtitle, videos }) => {
-  const [index, setIndex] = useState(0);
-  const total = videos.length;
-  const current = buildEmbedUrl(videos[index]);
-
-  const handleNext = () => setIndex((prev) => (prev + 1) % total);
-  const handlePrev = () => setIndex((prev) => (prev - 1 + total) % total);
-
+const VideoCarousel = ({ title, subtitle, videos, startAt }) => {
+  // Only show a single video, no arrows
+  const current = buildEmbedUrl(videos[0]) + (startAt ? `&start=${startAt}` : '');
   return (
     <div className="carousel">
       <div className="carousel-header">
@@ -34,14 +29,6 @@ const VideoCarousel = ({ title, subtitle, videos }) => {
         </div>
       </div>
       <div className="carousel-frame">
-        <button
-          type="button"
-          className="carousel-nav prev"
-          onClick={handlePrev}
-          aria-label="Previous"
-        >
-          ‹
-        </button>
         <iframe
           className="carousel-video"
           key={current}
@@ -50,14 +37,6 @@ const VideoCarousel = ({ title, subtitle, videos }) => {
           allow="autoplay; encrypted-media; picture-in-picture"
           allowFullScreen
         />
-        <button
-          type="button"
-          className="carousel-nav next"
-          onClick={handleNext}
-          aria-label="Next"
-        >
-          ›
-        </button>
       </div>
     </div>
   );
@@ -96,44 +75,18 @@ export default function HomeScreen({ onLoginClick }) {
 
   const heroVideo = 'https://www.youtube.com/watch?v=5Tc4ruN1xR8&pp=ygUeZmFzaGlvbiBtb2RlbGxpbmcgZmFzaGlvbiB3ZWVr';
 
-  const eventsVideos = useMemo(
-    () => [
-      'https://www.youtube.com/watch?v=5D0i7mtlqLs&pp=ygUeZmFzaGlvbiBtb2RlbGxpbmcgZmFzaGlvbiB3ZWVr',
-      'https://www.youtube.com/watch?v=Nq-taA3DQEE&pp=ygUeZmFzaGlvbiBtb2RlbGxpbmcgZmFzaGlvbiB3ZWVr',
-      'https://www.youtube.com/watch?v=CwmKr-wkj1M&pp=ygUeZmFzaGlvbiBtb2RlbGxpbmcgZmFzaGlvbiB3ZWVr2AYL',
-      'https://www.youtube.com/watch?v=HfJgt9oEXms&pp=ygUeZmFzaGlvbiBtb2RlbGxpbmcgZmFzaGlvbiB3ZWVr',
-      'https://www.youtube.com/watch?v=vK3Jq8AJO5s&pp=ygUeZmFzaGlvbiBtb2RlbGxpbmcgZmFzaGlvbiB3ZWVr',
-      'https://www.youtube.com/watch?v=25956Au5n8Y&pp=ygUeZmFzaGlvbiBtb2RlbGxpbmcgZmFzaGlvbiB3ZWVr',
-      'https://www.youtube.com/watch?v=6eCl9q2x77U&pp=ygUeZmFzaGlvbiBtb2RlbGxpbmcgZmFzaGlvbiB3ZWVr',
-    ],
-    []
-  );
+  // Updated caroussel videos per section
+  const eventsVideos = useMemo(() => [
+    'https://www.youtube.com/watch?v=EsHLkyvLqU8'
+  ], []);
 
-  const creatorsVideos = useMemo(
-    () => [
-      'https://www.youtube.com/watch?v=W-lPWow1lz8&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz0gcJCZEKAYcqIYzv',
-      'https://www.youtube.com/watch?v=pDnNcktioxc&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz',
-      'https://www.youtube.com/watch?v=N175V2OK3K0&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz',
-      'https://www.youtube.com/watch?v=hoKDrFyQDy0&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz',
-      'https://www.youtube.com/watch?v=A0uAr8H1dWU&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz',
-      'https://www.youtube.com/watch?v=OFb4IFpZdx0&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz',
-      'https://www.youtube.com/watch?v=y6NGVqahOOE&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz',
-    ],
-    []
-  );
+  const creatorsVideos = useMemo(() => [
+    'https://www.youtube.com/watch?v=uE0fuzYKV9U&pp=ygUvd29tZW4gZGFuY2luZyBhbmQgYWNyb2JhdGluZyBzaG93Y2FzZSBkZW1vIHJlZWw%3D'
+  ], []);
 
-  const talentsVideos = useMemo(
-    () => [
-      'https://www.youtube.com/watch?v=cFIu-rPe9Pg&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz',
-      'https://www.youtube.com/watch?v=afbCCkgVGHY&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz',
-      'https://www.youtube.com/watch?v=DlKsYHC8QAw&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz',
-      'https://www.youtube.com/watch?v=UYDrMA16248&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz0gcJCZEKAYcqIYzv',
-      'https://www.youtube.com/watch?v=QPuH-2YXv_A&pp=ygUbZmFzaGlvbiBtb2RlbGxpbmcgZGVzaWduZXJz',
-    ],
-    []
-  );
-
-  const universeVideos = useMemo(() => [heroVideo], [heroVideo]);
+  const talentsVideos = useMemo(() => [
+    'https://www.youtube.com/watch?v=lXWJ6xY14x0&pp=ygU2d29tZW4gZmFzaGlvbiBtb2RlbGxpbmcgcnVud2F5IHNob3cgc2hvd2Nhc2UgZGVtbyByZWVs'
+  ], []);
 
   return (
     <div className="home-screen">
@@ -226,6 +179,7 @@ export default function HomeScreen({ onLoginClick }) {
           title={t('sections.creators')}
           subtitle={t('sections.creatorsSubtitle')}
           videos={creatorsVideos}
+          startAt={15}
         />
       </section>
 
@@ -234,16 +188,11 @@ export default function HomeScreen({ onLoginClick }) {
           title={t('sections.talents')}
           subtitle={t('sections.talentsSubtitle')}
           videos={talentsVideos}
+          startAt={10}
         />
       </section>
 
-      <section className="carousel-section" id="univers">
-        <VideoCarousel
-          title={t('sections.universe')}
-          subtitle={t('sections.universeCopy')}
-          videos={universeVideos}
-        />
-      </section>
+      {/* Removed universe section as requested */}
 
     </div>
   );
