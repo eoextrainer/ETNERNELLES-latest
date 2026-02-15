@@ -247,7 +247,6 @@ export default function HomeScreen({ onLoginClick }) {
       {/* KIOSK section inspired by mon-kiosque.fr */}
       <section className="kiosk-section" id="kiosk">
         <div className="kiosk-header">
-          <img src="https://www.mon-kiosque.fr/images/logos/logo_mon_kiosque_fr_blanc.png" alt="Kiosk Logo" className="kiosk-logo" />
           <h2>KIOSK</h2>
         </div>
         <div className="kiosk-search-bar">
