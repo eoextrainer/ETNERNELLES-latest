@@ -14,6 +14,7 @@ const getVideoId = (url) => {
 const buildEmbedUrl = (url) => {
   const id = getVideoId(url);
   if (!id) return '';
+  // Ensure controls=0 is always present to hide all controls
   return `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&fs=0&loop=1&playlist=${id}`;
 };
 
