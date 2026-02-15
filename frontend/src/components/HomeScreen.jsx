@@ -107,7 +107,7 @@ export default function HomeScreen({ onLoginClick }) {
         </button>
 
         <div className="nav-center-group">
-          <ul className={`nav-menu ${navOpen ? 'active' : ''}`}>
+          <ul className={`nav-menu ${navOpen ? 'active' : ''}`}> 
             <li><a href="#evenements">{t('navigation.events')}</a></li>
             <li className="nav-separator">|</li>
             <li><a href="#createurs">{t('navigation.creators')}</a></li>
@@ -150,6 +150,26 @@ export default function HomeScreen({ onLoginClick }) {
                 {/* ExploreBook ghost-button removed */}
             {/* Connectez vous ghost-button removed */}
           </div>
+        </div>
+      </section>
+
+      {/* Elegant Google Map Card before Spotlight section */}
+      <section className="map-card-section">
+        <div className="map-card">
+          <h2 style={{textAlign:'center',fontSize:'2rem',fontWeight:'700',marginBottom:'1rem'}}>Notre emplacement</h2>
+          <div style={{display:'flex',justifyContent:'center'}}>
+            <iframe
+              title="Google Map - 2 Rue de Saint-Gobain, 37700 Saint-Pierre-des-Corps"
+              width="100%"
+              height="400"
+              style={{borderRadius:'18px',boxShadow:'0 4px 32px rgba(0,0,0,0.07)',maxWidth:'900px',border:'none'}}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=2+Rue+de+Saint-Gobain,+37700+Saint-Pierre-des-Corps&output=embed"
+            />
+          </div>
+          <div style={{textAlign:'center',marginTop:'1rem',fontSize:'1.1rem',color:'#555'}}>2 Rue de Saint-Gobain, 37700 Saint-Pierre-des-Corps</div>
         </div>
       </section>
 
