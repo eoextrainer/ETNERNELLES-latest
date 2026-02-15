@@ -215,7 +215,7 @@ export default function HomeScreen({ onLoginClick }) {
               <img src="/res/images/male-and-female-dancers-in-mid-air.jpg" alt="Spectacles et danses acrobatiques" loading="lazy" />
             </div>
             <div className="spotlight-copy">
-              <h3>Spectacles et danses acrobatiques</h3>
+              <h3>Danses acrobatiques</h3>
               <p><a href="https://www.emmalines.com" target="_blank" rel="noopener noreferrer">Emmalines</a></p>
             </div>
           </div>
@@ -252,19 +252,19 @@ export default function HomeScreen({ onLoginClick }) {
         {/* Custom Modèle cards below Défile de Mode / La femme sous toutes ses couleurs */}
         <div className="spotlight-grid" style={{marginTop:'2rem'}}>
           <SpotlightCard
-            name="Modèle 01"
+            name="Défilé Intemporel"
             subtitle="Talent éditorial & runway"
-            imageUrl={modelImages[0]}
+            imageUrl={"/res/images/6F3A4916-scaled.jpg"}
           />
           <SpotlightCard
-            name="Modèle 02"
-            subtitle="Talent éditorial & runway"
-            imageUrl={modelImages[1]}
+            name="Couture Contemporaine"
+            subtitle="La mode au fil du temps"
+            imageUrl={"/res/images/Louis-Vuittons-spring-2020-show.-vogue.jpg"}
           />
           <SpotlightCard
-            name="Modèle 03"
-            subtitle="Talent éditorial & runway"
-            imageUrl={modelImages[2]}
+            name="Les Horizons de la Mode"
+            subtitle="Beauté, Classe, et Style au naturel"
+            imageUrl={"/res/images/Max Mara SS26 14.jpg"}
           />
         </div>
       </section>
