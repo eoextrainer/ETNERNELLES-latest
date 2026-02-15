@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './HomeScreen.css';
 
 const modelImageMap = import.meta.glob('../../../tmp/models/*.{webp,png,jpg,jpeg}', {
@@ -22,25 +23,53 @@ const SpotlightCard = ({ name, subtitle, imageUrl }) => (
 );
 
 export default function WorkspaceScreen({ onBack }) {
+  const { t } = useTranslation();
+  const [navOpen, setNavOpen] = useState(false);
   return (
-    <div className="home-container">
-      <div className="home-header">
-        <h1>WORKSPACE</h1>
-      </div>
+    <div className="home-screen">
+      <nav className="home-nav">
+        <div className="nav-brand">
+          <h1>ETERNELLES</h1>
+          <p>{t('app.title')}</p>
+        </div>
+
+        <button
+          className={`nav-toggle ${navOpen ? 'active' : ''}`}
+          onClick={() => setNavOpen(!navOpen)}
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div className="nav-center-group">
+          <ul className={`nav-menu ${navOpen ? 'active' : ''}`}>
+            <li><a href="#evenements">{t('navigation.events')}</a></li>
+            <li className="nav-separator">|</li>
+            <li><a href="#createurs">{t('navigation.creators')}</a></li>
+            <li className="nav-separator">|</li>
+            <li><a href="#talents">{t('navigation.talents')}</a></li>
+            <li className="nav-separator">|</li>
+            <li><a href="#formulaire">{t('navigation.formulaire')}</a></li>
+          </ul>
+        </div>
+      </nav>
+
       <div className="home-content">
         <button className="back-btn" onClick={onBack}>Back</button>
 
         <section className="spotlight-section" id="workspace-spotlight">
           <div className="section-heading">
-            <h2>En vedette</h2>
-            <p>Une sélection de talents émergents et établis.</p>
+            <h2>{t('sections.spotlight')}</h2>
+            <p>{t('sections.spotlightSubtitle')}</p>
           </div>
           <div className="spotlight-grid">
             {[...Array(11)].map((_, i) => (
               <SpotlightCard
                 key={i}
                 name={`Modèle ${String(i + 1).padStart(2, '0')}`}
-                subtitle={"Talent éditorial & runway"}
+                subtitle={t('labels.featuredRole') || "Talent éditorial & runway"}
                 imageUrl={modelImages[i % modelImages.length]}
               />
             ))}
