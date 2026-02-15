@@ -189,13 +189,33 @@ export default function HomeScreen({ onLoginClick }) {
         </div>
       </section>
 
+
       <section className="carousel-section" id="evenements">
         <VideoCarousel
           title={t('sections.events')}
           subtitle={t('sections.eventsSubtitle')}
           videos={eventsVideos}
         />
+        {/* Custom Modèle cards below Basketball/La femme en mouvement */}
+        <div className="spotlight-grid" style={{marginTop:'2rem'}}>
+          <SpotlightCard
+            name="Modèle 01"
+            subtitle="Talent éditorial & runway"
+            imageUrl={modelImages[0]}
+          />
+          <SpotlightCard
+            name="Modèle 02"
+            subtitle="Talent éditorial & runway"
+            imageUrl={modelImages[1]}
+          />
+          <SpotlightCard
+            name="Modèle 03"
+            subtitle="Talent éditorial & runway"
+            imageUrl={modelImages[2]}
+          />
+        </div>
       </section>
+
 
       <section className="carousel-section" id="createurs">
         <VideoCarousel
@@ -204,7 +224,26 @@ export default function HomeScreen({ onLoginClick }) {
           videos={creatorsVideos}
           startAt={15}
         />
+        {/* Custom Modèle cards below Danse et Spectacles / La femme au rythme de son corps */}
+        <div className="spotlight-grid" style={{marginTop:'2rem'}}>
+          <SpotlightCard
+            name="Modèle 01"
+            subtitle="Talent éditorial & runway"
+            imageUrl={modelImages[0]}
+          />
+          <SpotlightCard
+            name="Modèle 02"
+            subtitle="Talent éditorial & runway"
+            imageUrl={modelImages[1]}
+          />
+          <SpotlightCard
+            name="Modèle 03"
+            subtitle="Talent éditorial & runway"
+            imageUrl={modelImages[2]}
+          />
+        </div>
       </section>
+
 
       <section className="carousel-section" id="talents">
         <VideoCarousel
@@ -214,6 +253,24 @@ export default function HomeScreen({ onLoginClick }) {
           startAt={20}
           endOffset={10}
         />
+        {/* Custom Modèle cards below Défile de Mode / La femme sous toutes ses couleurs */}
+        <div className="spotlight-grid" style={{marginTop:'2rem'}}>
+          <SpotlightCard
+            name="Modèle 01"
+            subtitle="Talent éditorial & runway"
+            imageUrl={modelImages[0]}
+          />
+          <SpotlightCard
+            name="Modèle 02"
+            subtitle="Talent éditorial & runway"
+            imageUrl={modelImages[1]}
+          />
+          <SpotlightCard
+            name="Modèle 03"
+            subtitle="Talent éditorial & runway"
+            imageUrl={modelImages[2]}
+          />
+        </div>
       </section>
 
 
