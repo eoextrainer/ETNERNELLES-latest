@@ -70,7 +70,7 @@ export default function SplashScreen({ onComplete }) {
 
       <div className="splash-content">
         <h1 className="splash-title">ETERNELLES</h1>
-        <p className="splash-subtitle">8 Mars 2026 a Tours (Indre et Loire)</p>
+        <p className="splash-subtitle">8 Mars 2026 à Tours (Indre et Loire)</p>
         <button type="button" className="splash-skip" onClick={handleSkip}>
           BIENVENU
         </button>
