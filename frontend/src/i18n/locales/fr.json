@@ -47,13 +47,31 @@
     "events": "SPORT",
     "creators": "SPECTACLE",
     "talents": "DEFILE",
-    "universe": "FORMULAIRE KIOSK",
+    "formulaire": "FORMULAIRE",
+    "kiosk": "KIOSK",
     "discover": "Découvrir",
     "dashboard": "Tableau de bord",
     "logout": "Se déconnecter",
     "profile": "Profil",
     "settings": "Paramètres"
   },
+    "registration": {
+      "title": "Inscription",
+      "prenom": "Prénom",
+      "nom": "Nom de famille",
+      "email": "Email",
+      "ville": "Ville",
+      "pays": "Pays",
+      "category": "Catégorie",
+      "categoryOptions": {
+        "spectateur": "Spectateur",
+        "vip": "VIP",
+        "sponsor": "Sponsor",
+        "talent": "Talent",
+        "direction": "Direction"
+      },
+      "submit": "S'inscrire"
+    },
   "themes": {
     "aura": "Aura",
     "auraDesc": "Palette éditoriale",

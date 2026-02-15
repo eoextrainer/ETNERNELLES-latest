@@ -110,7 +110,8 @@ export default function HomeScreen({ onLoginClick }) {
           <li><a href="#evenements">{t('navigation.events')}</a></li>
           <li><a href="#createurs">{t('navigation.creators')}</a></li>
           <li><a href="#talents">{t('navigation.talents')}</a></li>
-          <li><a href="#univers">{t('navigation.universe')}</a></li>
+          <li><a href="#formulaire">{t('navigation.formulaire')}</a></li>
+          <li><a href="#kiosk">{t('navigation.kiosk')}</a></li>
           <li>
             <button
               className="nav-login-btn"
@@ -192,7 +193,57 @@ export default function HomeScreen({ onLoginClick }) {
         />
       </section>
 
-      {/* Removed universe section as requested */}
+
+      {/* Registration Form Section */}
+      <section className="form-section" id="formulaire">
+        <div className="form-card">
+          <h2>{t('registration.title')}</h2>
+          <form>
+            <div className="form-row">
+              <label htmlFor="prenom">{t('registration.prenom')}</label>
+              <input type="text" id="prenom" name="prenom" required />
+            </div>
+            <div className="form-row">
+              <label htmlFor="nom">{t('registration.nom')}</label>
+              <input type="text" id="nom" name="nom" required />
+            </div>
+            <div className="form-row">
+              <label htmlFor="email">{t('registration.email')}</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div className="form-row">
+              <label htmlFor="ville">{t('registration.ville')}</label>
+              <input type="text" id="ville" name="ville" required />
+            </div>
+            <div className="form-row">
+              <label htmlFor="pays">{t('registration.pays')}</label>
+              <input type="text" id="pays" name="pays" required />
+            </div>
+            <div className="form-row">
+              <label htmlFor="category">{t('registration.category')}</label>
+              <select id="category" name="category" required>
+                <option value="">--</option>
+                <option value="spectateur">{t('registration.categoryOptions.spectateur')}</option>
+                <option value="vip">{t('registration.categoryOptions.vip')}</option>
+                <option value="sponsor">{t('registration.categoryOptions.sponsor')}</option>
+                <option value="talent">{t('registration.categoryOptions.talent')}</option>
+                <option value="direction">{t('registration.categoryOptions.direction')}</option>
+              </select>
+            </div>
+            <div className="form-row">
+              <button type="submit" className="cta-button">{t('registration.submit')}</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      {/* Placeholder for KIOSK section */}
+      <section className="kiosk-section" id="kiosk">
+        <div className="kiosk-placeholder">
+          <h2>KIOSK</h2>
+          <p>Section à venir...</p>
+        </div>
+      </section>
 
     </div>
   );
