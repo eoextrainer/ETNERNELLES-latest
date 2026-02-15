@@ -249,19 +249,7 @@ export default function HomeScreen({ onLoginClick }) {
         <div className="kiosk-header">
           <h2>KIOSK</h2>
         </div>
-        <div className="kiosk-search-bar">
-          <input type="text" placeholder="Rechercher un magazine..." />
-          <button type="button">🔍</button>
-        </div>
-        <div className="kiosk-categories">
-          <button>ANIMAUX</button>
-          <button>AUTO</button>
-          <button>SPORT</button>
-          <button>OUTDOOR</button>
-          <button>VOYAGE</button>
-          <button>MER</button>
-          <button>DIVERS</button>
-        </div>
+        {/* Removed search bar and category filter as requested */}
         <div className="kiosk-magazine-grid">
           {/* Example magazine cards, replace with real data as needed */}
           <div className="magazine-card">
