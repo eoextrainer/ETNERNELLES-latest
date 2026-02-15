@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import SplashScreen from './components/SplashScreen';
-import LoginPage from './components/LoginPage';
 import HomeScreen from './components/HomeScreen';
 import Dashboard from './components/Dashboard';
+import WorkspaceScreen from './components/WorkspaceScreen';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -42,7 +42,7 @@ function App() {
   };
 
   const handleLoginClick = () => {
-    setCurrentPage('login');
+    setCurrentPage('workspace');
   };
 
   const handleLogout = () => {
@@ -72,10 +72,12 @@ function App() {
         {currentPage === 'home' && (
           <HomeScreen onLoginClick={handleLoginClick} />
         )}
-        
-        {currentPage === 'login' && (
-          <LoginPage onLogin={handleLogin} />
+
+        {currentPage === 'workspace' && (
+          <WorkspaceScreen onBack={() => setCurrentPage('home')} />
         )}
+        
+        {/* LoginPage removed */}
         
         {currentPage === 'dashboard' && user && (
           <Dashboard user={user} onLogout={handleLogout} />

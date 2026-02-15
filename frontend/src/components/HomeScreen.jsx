@@ -118,13 +118,15 @@ export default function HomeScreen({ onLoginClick }) {
           </ul>
         </div>
 
-        <div className="nav-login-group">
+        <div className="nav-login-group" style={{ marginLeft: 'auto' }}>
           <button
-            className="nav-login-btn"
+            className="ghost-button"
+            onMouseOver={e => { e.currentTarget.style.color = 'black'; }}
+            onMouseOut={e => { e.currentTarget.style.color = ''; }}
             onClick={onLoginClick}
             type="button"
           >
-            {t('home.login')}
+            CONNECTEZ VOUS
           </button>
         </div>
       </nav>
@@ -145,12 +147,8 @@ export default function HomeScreen({ onLoginClick }) {
           <h1 className="hero-title">{t('home.heroTitle')}</h1>
           <p className="hero-subtitle">{t('home.heroSubtitle')}</p>
           <div className="hero-actions">
-            <button className="cta-button" onClick={onLoginClick} type="button">
-              {t('home.getStarted')}
-            </button>
-            <button className="ghost-button" type="button">
-              {t('home.exploreBook')}
-            </button>
+                {/* ExploreBook ghost-button removed */}
+            {/* Connectez vous ghost-button removed */}
           </div>
         </div>
       </section>
