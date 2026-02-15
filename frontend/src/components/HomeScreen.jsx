@@ -172,22 +172,6 @@ export default function HomeScreen({ onLoginClick }) {
         </div>
       </section>
 
-      <section className="spotlight-section" id="spotlight-grid">
-        <div className="section-heading">
-          <h2>{t('sections.spotlight')}</h2>
-          <p>{t('sections.spotlightSubtitle')}</p>
-        </div>
-        <div className="spotlight-grid">
-          {spotlightModels.map((name, index) => (
-            <SpotlightCard
-              key={modelImages[index]}
-              name={name}
-              subtitle={t('labels.featuredRole')}
-              imageUrl={modelImages[index]}
-            />
-          ))}
-        </div>
-      </section>
 
 
       <section className="carousel-section" id="evenements">
@@ -319,15 +303,23 @@ export default function HomeScreen({ onLoginClick }) {
           </div>
         </div>
         <div className="kiosk-section" id="kiosk">
-          <div className="kiosk-header">
-            <h2>ETERNELLES MAGAZINE</h2>
-          </div>
-          <div className="kiosk-magazine-grid single">
-            <div className="magazine-card enlarged">
-              <img src="https://via.placeholder.com/120x160?text=Magazine+1" alt="Magazine 1" />
-              <div className="magazine-info">
-                <span className="magazine-category">SPORT</span>
-                <h3>Basket Magazine N° 32</h3>
+          <div className="pricing-table-card">
+            <h2 style={{textAlign:'center',fontSize:'2rem',fontWeight:'700',marginBottom:'1.5rem'}}>Tarifs</h2>
+            <div className="pricing-table-grid">
+              <div className="pricing-card">
+                <h3>Individuel</h3>
+                <div className="pricing-price">10&nbsp;€</div>
+                <div className="pricing-desc">Accès valable pour toute la journée</div>
+              </div>
+              <div className="pricing-card">
+                <h3>Famille</h3>
+                <div className="pricing-price">35&nbsp;€</div>
+                <div className="pricing-desc">Jusqu'à 4 personnes<br/>Accès valable pour toute la journée<br/>+ espace famille dédié</div>
+              </div>
+              <div className="pricing-card">
+                <h3>Groupe</h3>
+                <div className="pricing-price">80&nbsp;€</div>
+                <div className="pricing-desc">Jusqu'à 10 personnes<br/>Accès valable pour toute la journée<br/>+ espace groupe dédié</div>
               </div>
             </div>
           </div>

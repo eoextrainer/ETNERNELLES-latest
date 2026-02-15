@@ -1,3 +1,52 @@
+/* Pricing Table Styles */
+.pricing-table-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+  padding: 3.5rem 3.5rem 3rem 3.5rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pricing-table-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.pricing-card {
+  background: var(--aura-cream, #f8f6f2);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: 2.2rem 2rem 2rem 2rem;
+  min-width: 180px;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.pricing-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.pricing-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--aura-accent, #b47cff);
+  margin-bottom: 0.7rem;
+}
+.pricing-desc {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 0.2rem;
+  line-height: 1.6;
+}
 .map-card--fullmap {
   padding: 2.5rem 0 2rem 0;
 }
