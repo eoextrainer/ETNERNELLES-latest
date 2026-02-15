@@ -106,12 +106,24 @@
   top: 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   padding: 1.5rem 3.5rem;
   background: rgba(244, 239, 231, 0.95);
   border-bottom: 1px solid var(--aura-line);
   backdrop-filter: blur(6px);
+}
+
+.nav-center-group {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-login-group {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .nav-brand {
@@ -172,8 +184,6 @@
   margin: 0;
   padding: 0;
   align-items: center;
-  justify-content: flex-start;
-  margin-right: auto;
   gap: 1.2rem;
 }
 

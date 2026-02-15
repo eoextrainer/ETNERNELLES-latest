@@ -106,26 +106,29 @@ export default function HomeScreen({ onLoginClick }) {
           <span></span>
         </button>
 
-        <ul className={`nav-menu ${navOpen ? 'active' : ''}`}>
-          <li><a href="#evenements">{t('navigation.events')}</a></li>
-          <li className="nav-separator">|</li>
-          <li><a href="#createurs">{t('navigation.creators')}</a></li>
-          <li className="nav-separator">|</li>
-          <li><a href="#talents">{t('navigation.talents')}</a></li>
-          <li className="nav-separator">|</li>
-          <li><a href="#formulaire">{t('navigation.formulaire')}</a></li>
-          <li className="nav-separator">|</li>
-          <li><a href="#kiosk">{t('navigation.kiosk')}</a></li>
-          <li>
-            <button
-              className="nav-login-btn"
-              onClick={onLoginClick}
-              type="button"
-            >
-              {t('home.login')}
-            </button>
-          </li>
-        </ul>
+        <div className="nav-center-group">
+          <ul className={`nav-menu ${navOpen ? 'active' : ''}`}>
+            <li><a href="#evenements">{t('navigation.events')}</a></li>
+            <li className="nav-separator">|</li>
+            <li><a href="#createurs">{t('navigation.creators')}</a></li>
+            <li className="nav-separator">|</li>
+            <li><a href="#talents">{t('navigation.talents')}</a></li>
+            <li className="nav-separator">|</li>
+            <li><a href="#formulaire">{t('navigation.formulaire')}</a></li>
+            <li className="nav-separator">|</li>
+            <li><a href="#kiosk">{t('navigation.kiosk')}</a></li>
+          </ul>
+        </div>
+
+        <div className="nav-login-group">
+          <button
+            className="nav-login-btn"
+            onClick={onLoginClick}
+            type="button"
+          >
+            {t('home.login')}
+          </button>
+        </div>
       </nav>
 
       <section className="hero-section" id="hero">
