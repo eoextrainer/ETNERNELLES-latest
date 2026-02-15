@@ -183,19 +183,19 @@ export default function HomeScreen({ onLoginClick }) {
         {/* Custom Modèle cards below Basketball/La femme en mouvement */}
         <div className="spotlight-grid" style={{marginTop:'2rem'}}>
           <SpotlightCard
-            name="Modèle 01"
-            subtitle="Talent éditorial & runway"
-            imageUrl={modelImages[0]}
+            name="Concourt de Tirs"
+            subtitle="Avec rapidité et précision"
+            imageUrl={"/res/images/e72390d2-1060-4b1a-8f88-5b813ccee22a_750x422.jpg"}
           />
           <SpotlightCard
-            name="Modèle 02"
-            subtitle="Talent éditorial & runway"
-            imageUrl={modelImages[1]}
+            name="Systèmes de Basket"
+            subtitle="Clefs du jeu stratégique"
+            imageUrl={"/res/images/dribbling-drills-to-practice-before-you-play-basketball.avif"}
           />
           <SpotlightCard
-            name="Modèle 03"
-            subtitle="Talent éditorial & runway"
-            imageUrl={modelImages[2]}
+            name="Concours de Dunk"
+            subtitle="Survoler la défense"
+            imageUrl={"/res/images/13382955_web1_All-Star-Saturday-Basketball-2-1-4.webp"}
           />
         </div>
       </section>
@@ -210,21 +210,33 @@ export default function HomeScreen({ onLoginClick }) {
         />
         {/* Custom Modèle cards below Danse et Spectacles / La femme au rythme de son corps */}
         <div className="spotlight-grid" style={{marginTop:'2rem'}}>
-          <SpotlightCard
-            name="Modèle 01"
-            subtitle="Talent éditorial & runway"
-            imageUrl={modelImages[0]}
-          />
-          <SpotlightCard
-            name="Modèle 02"
-            subtitle="Talent éditorial & runway"
-            imageUrl={modelImages[1]}
-          />
-          <SpotlightCard
-            name="Modèle 03"
-            subtitle="Talent éditorial & runway"
-            imageUrl={modelImages[2]}
-          />
+          <div className="spotlight-card">
+            <div className="spotlight-image">
+              <img src="/res/images/male-and-female-dancers-in-mid-air.jpg" alt="Spectacles et danses acrobatiques" loading="lazy" />
+            </div>
+            <div className="spotlight-copy">
+              <h3>Spectacles et danses acrobatiques</h3>
+              <p><a href="https://www.emmalines.com" target="_blank" rel="noopener noreferrer">Emmalines</a></p>
+            </div>
+          </div>
+          <div className="spotlight-card">
+            <div className="spotlight-image">
+              <img src="/res/images/11062b_05c36194c6bb4038a4d02a2dae529e28~mv2.avif" alt="Danses Afro" loading="lazy" />
+            </div>
+            <div className="spotlight-copy">
+              <h3>Danses Afro</h3>
+              <p><a href="#" target="_blank" rel="noopener noreferrer">Fetch Asso</a></p>
+            </div>
+          </div>
+          <div className="spotlight-card">
+            <div className="spotlight-image">
+              <img src="/res/images/b3f077b4e7cad49870b9.webp" alt="Rhytmes Latino" loading="lazy" />
+            </div>
+            <div className="spotlight-copy">
+              <h3>Rhytmes Latino</h3>
+              <p>Sales en Vivo</p>
+            </div>
+          </div>
         </div>
       </section>
 
