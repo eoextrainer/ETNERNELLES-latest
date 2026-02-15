@@ -155,18 +155,17 @@ export default function HomeScreen({ onLoginClick }) {
 
       {/* Elegant Google Map Card before Spotlight section */}
       <section className="map-card-section">
-        <div className="map-card">
+        <div className="map-card map-card--fullmap">
           <h2 style={{textAlign:'center',fontSize:'2rem',fontWeight:'700',marginBottom:'1rem'}}>Notre emplacement</h2>
-          <div style={{display:'flex',justifyContent:'center'}}>
+          <div className="map-card-iframe-wrapper" style={{height:'500px',width:'100%'}}>
             <iframe
               title="Google Map - 2 Rue de Saint-Gobain, 37700 Saint-Pierre-des-Corps"
-              width="100%"
-              height="400"
-              style={{borderRadius:'18px',boxShadow:'0 4px 32px rgba(0,0,0,0.07)',maxWidth:'900px',border:'none'}}
+              className="map-card-iframe"
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps?q=2+Rue+de+Saint-Gobain,+37700+Saint-Pierre-des-Corps&output=embed"
+              style={{width:'100%',height:'100%',border:'none',display:'block'}}
             />
           </div>
           <div style={{textAlign:'center',marginTop:'1rem',fontSize:'1.1rem',color:'#555'}}>2 Rue de Saint-Gobain, 37700 Saint-Pierre-des-Corps</div>
