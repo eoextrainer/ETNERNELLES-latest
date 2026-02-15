@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "8 Mars 2025 - La journée international des droits de la femme",
+    "title": "8 Mars 2025 - La journée internationale des droits de la femme",
     "tagline": "Créez votre identité digitale"
   },
   "splash": {
@@ -13,11 +13,11 @@
     "cta": "Commencer",
     "login": "Se connecter",
     "discover": "Découvrez l'excellence créative",
-    "getStarted": "Créer mon book",
-    "heroEyebrow": "UNE IDENTITÉ DIGITALE",
-    "heroTitle": "Votre book, votre image, votre empreinte.",
-    "heroSubtitle": "Créez un book raffiné, gérez vos castings et connectez-vous à des partenaires de confiance.",
-    "exploreBook": "Explorer l’écosystème"
+    "getStarted": "Inscrivez vous",
+    "heroEyebrow": "NOUS VOUS CELEBRONS",
+    "heroTitle": "ETERNELLES",
+    "heroSubtitle": "Découvrez la femme sous toutes ses couleurs, ses beautés et ses styles",
+    "exploreBook": "Connectez vous"
   },
   "login": {
     "title": "Connexion",
@@ -44,10 +44,10 @@
     "explore": "Explorer",
     "creators": "Créateurs",
     "about": "À propos",
-    "events": "Nos Evenements",
-    "creators": "Nos Createurs",
-    "talents": "Nos Talents",
-    "universe": "l'univers ETERNELLES",
+    "events": "SPORT",
+    "creators": "SPECTACLE",
+    "talents": "DEFILE",
+    "universe": "FORMULAIRE KIOSK",
     "discover": "Découvrir",
     "dashboard": "Tableau de bord",
     "logout": "Se déconnecter",
