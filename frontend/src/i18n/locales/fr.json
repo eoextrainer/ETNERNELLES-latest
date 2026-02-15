@@ -1,0 +1,243 @@
+{
+  "app": {
+    "title": "8 Mars 2025 - La journée international des droits de la femme",
+    "tagline": "Créez votre identité digitale"
+  },
+  "splash": {
+    "skip": "Passer",
+    "enter": "Entrer"
+  },
+  "home": {
+    "title": "Bienvenue chez ETERNELLES",
+    "subtitle": "L’espace éditorial des mannequins et talents",
+    "cta": "Commencer",
+    "login": "Se connecter",
+    "discover": "Découvrez l'excellence créative",
+    "getStarted": "Créer mon book",
+    "heroEyebrow": "UNE IDENTITÉ DIGITALE",
+    "heroTitle": "Votre book, votre image, votre empreinte.",
+    "heroSubtitle": "Créez un book raffiné, gérez vos castings et connectez-vous à des partenaires de confiance.",
+    "exploreBook": "Explorer l’écosystème"
+  },
+  "login": {
+    "title": "Connexion",
+    "tagline": "Accédez à votre atelier",
+    "email": "Adresse e‑mail",
+    "password": "Mot de passe",
+    "signin": "Se connecter",
+    "signin_loading": "Connexion...",
+    "demo": "Essayer un compte démo",
+    "signup": "Inscrivez-vous ici",
+    "or": "ou",
+    "footer": "Vous n’avez pas de compte ?",
+    "welcome": "Bienvenue chez ETERNELLES",
+    "welcome_subtitle": "Un espace soigné pour book et castings",
+    "features": {
+      "analytics": "Analytique des castings",
+      "insights": "Insights portfolio",
+      "security": "Partenaires vérifiés",
+      "access": "Accès mobile"
+    }
+  },
+  "navigation": {
+    "home": "Accueil",
+    "explore": "Explorer",
+    "creators": "Créateurs",
+    "about": "À propos",
+    "events": "Nos Evenements",
+    "creators": "Nos Createurs",
+    "talents": "Nos Talents",
+    "universe": "l'univers ETERNELLES",
+    "discover": "Découvrir",
+    "dashboard": "Tableau de bord",
+    "logout": "Se déconnecter",
+    "profile": "Profil",
+    "settings": "Paramètres"
+  },
+  "themes": {
+    "aura": "Aura",
+    "auraDesc": "Palette éditoriale",
+    "atelier": "Atelier",
+    "atelierDesc": "Neutres de studio",
+    "ivory": "Ivoire",
+    "ivoryDesc": "Surfaces lumineuses",
+    "noir": "Noir",
+    "noirDesc": "Sophistication feutrée"
+  },
+  "roles": {
+    "admin": "Admin système",
+    "manager": "Admin plateforme",
+    "moderator": "Modérateur plateforme",
+    "premium": "Mannequin premium",
+    "free": "Mannequin standard",
+    "demo": "Profil démo"
+  },
+  "sections": {
+    "featuredEvents": "Événements en vedette",
+    "featuredCreators": "Créateurs en vedette",
+    "featuredTalents": "Talents en vedette",
+    "welcome": "Bienvenue chez ETERNELLES",
+    "spotlight": "En vedette",
+    "spotlightSubtitle": "Une sélection de talents émergents et établis.",
+    "events": "Nos Evenements",
+    "eventsSubtitle": "Les défilés, shows et castings incontournables.",
+    "creators": "Nos Createurs",
+    "creatorsSubtitle": "Designers, directeurs artistiques et studios.",
+    "talents": "Nos Talents",
+    "talentsSubtitle": "Les talents qui définissent la saison.",
+    "universe": "L’univers ETERNELLES",
+    "universeCopy": "Au-delà d’un book, ETERNELLES relie vos castings, vos partenaires vérifiés et une présence digitale durable.",
+    "universeCta": "Créer mon book",
+    "discoverTalents": "Découvrez nos talents",
+    "discoverSubtitle": "Rencontrez les visages qui façonneront la prochaine saison.",
+    "discoverCta": "Explorer la sélection"
+  },
+  "labels": {
+    "specializing": "Spécialisé en mode & design",
+    "event": "Événement",
+    "creator": "Créateur",
+    "talent": "Talent",
+    "featuredRole": "Talent éditorial & runway"
+  },
+  "cta": {
+    "getStarted": "Commencer",
+    "login": "Se connecter"
+  },
+  "errors": {
+    "networkError": "Erreur réseau. Veuillez vérifier votre connexion.",
+    "invalidCredentials": "Identifiants invalides",
+    "loginFailed": "Échec de la connexion. Veuillez réessayer."
+  },
+  "analytics": {
+    "title": "Insights & bookings"
+  },
+  "stats": {
+    "activeUsers": "Talents actifs",
+    "activeUsersChange": "↑ 12% ce mois-ci",
+    "projects": "Castings",
+    "projectsChange": "↑ 3% ce mois-ci",
+    "uptime": "Disponibilité",
+    "uptimeStatus": "Excellent",
+    "userRating": "Note partenaires"
+  },
+  "settings": {
+    "title": "Paramètres du compte",
+    "themeSelector": "Sélecteur de thème",
+    "themeSelectorDesc": "Choisissez votre thème d’espace de travail",
+    "profile": "Informations du profil",
+    "name": "Nom",
+    "role": "Rôle",
+    "editProfile": "Modifier le profil",
+    "security": "Paramètres de sécurité",
+    "password": "Mot de passe",
+    "passwordHint": "Dernière modification il y a 3 mois",
+    "mfa": "Authentification à deux facteurs",
+    "mfaStatus": "Non activée",
+    "updateSecurity": "Mettre à jour la sécurité",
+    "preferences": "Préférences",
+    "theme": "Thème",
+    "themeDefault": "Mode sombre",
+    "notifications": "Notifications",
+    "notificationsStatus": "Activées",
+    "managePreferences": "Gérer les préférences",
+    "dangerZone": "Zone dangereuse",
+    "dangerDesc": "Actions irréversibles",
+    "deleteAccount": "Supprimer le compte"
+  },
+  "admin": {
+    "features": {
+      "governance": "Gouvernance plateforme",
+      "governance_desc": "Superviser la conformité et les accès",
+      "ecosystem": "Supervision de l’écosystème",
+      "ecosystem_desc": "Coordonner partenaires et standards",
+      "quality": "Assurance qualité",
+      "quality_desc": "Protéger l’intégrité des profils",
+      "partners": "Réseau partenaires",
+      "partners_desc": "Gérer les partenaires vérifiés",
+      "insights": "Insights stratégiques",
+      "insights_desc": "Suivre la croissance et la performance"
+    }
+  },
+  "manager": {
+    "features": {
+      "castings": "Orchestration des castings",
+      "castings_desc": "Planifier et piloter les cycles",
+      "workflow": "Workflow des bookings",
+      "workflow_desc": "Coordonner briefs et validations",
+      "portfolios": "Direction des portfolios",
+      "portfolios_desc": "Guider l’éditorial des talents",
+      "team": "Opérations d’équipe",
+      "team_desc": "Aligner scouts et coordinateurs"
+    }
+  },
+  "moderator": {
+    "features": {
+      "review": "Revue des contenus",
+      "review_desc": "Valider les books et éditoriaux",
+      "rights": "Droits d’image",
+      "rights_desc": "Suivre permissions et crédits",
+      "safety": "Standards de sécurité",
+      "safety_desc": "Maintenir un écosystème fiable",
+      "feedback": "File de retours",
+      "feedback_desc": "Traiter les demandes"
+    }
+  },
+  "premium": {
+    "features": {
+      "portfolio": "Studio portfolio",
+      "portfolio_desc": "Composer vos éditoriaux",
+      "castings": "Invitations casting",
+      "castings_desc": "Répondre aux briefs exclusifs",
+      "bookings": "Bookings",
+      "bookings_desc": "Gérer vos placements",
+      "analytics": "Analytique performance",
+      "analytics_desc": "Suivre la portée",
+      "visibility": "Boost visibilité",
+      "visibility_desc": "Priorité dans les recherches"
+    }
+  },
+  "free": {
+    "features": {
+      "starter": "Portfolio de départ",
+      "starter_desc": "Lancer votre identité digitale",
+      "applications": "Candidatures",
+      "applications_desc": "Suivre vos demandes"
+    }
+  },
+  "demo": {
+    "features": {
+      "tour": "Parcours guidé",
+      "tour_desc": "Explorer un espace exemple",
+      "preview": "Aperçu du book",
+      "preview_desc": "Visualiser votre futur book"
+    }
+  },
+  "dashboard": {
+    "title": "Atelier ETERNELLES",
+    "welcome": "Bienvenue",
+    "eyebrow": "Votre espace",
+    "subtitle": "Créez, gérez et élevez votre présence mannequin",
+    "workspaces": "Espaces de travail",
+    "analytics": "Analytique",
+    "settings": "Paramètres",
+    "workspace": "Votre espace",
+    "newWorkspace": "+ Nouvel espace",
+    "role": "Rôle",
+    "theme": "Thème",
+    "widgets": "Widgets",
+    "signOut": "Se déconnecter"
+  },
+  "footer": {
+    "about": "ETERNELLES — L’écosystème du mannequinat.",
+    "aboutSub": "Books digitaux, castings et partenaires vérifiés.",
+    "legal": "Mentions légales",
+    "legalNotice": "Mentions légales",
+    "terms": "Conditions d’utilisation",
+    "privacy": "Politique de confidentialité",
+    "social": "Réseaux sociaux",
+    "faq": "FAQ",
+    "faqLink": "Questions fréquentes",
+    "booking": "Comment réserver",
+    "services": "Nos services"
+  }
+}

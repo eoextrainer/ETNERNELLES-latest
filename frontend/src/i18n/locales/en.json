@@ -1,0 +1,243 @@
+{
+  "app": {
+    "title": "ETERNELLES — The Fashion Modeling Ecosystem",
+    "tagline": "Create your digital identity"
+  },
+  "splash": {
+    "skip": "Skip",
+    "enter": "Enter"
+  },
+  "home": {
+    "title": "Welcome to ETERNELLES",
+    "subtitle": "The editorial space for models and talent",
+    "cta": "Get Started",
+    "login": "Sign In",
+    "discover": "Discover Creative Excellence",
+    "getStarted": "Create My Book",
+    "heroEyebrow": "A DIGITAL IDENTITY",
+    "heroTitle": "Your portfolio, your image, your imprint.",
+    "heroSubtitle": "Build a refined personal book, manage castings, and connect with trusted fashion partners.",
+    "exploreBook": "Explore the ecosystem"
+  },
+  "login": {
+    "title": "Sign In",
+    "tagline": "Access your atelier",
+    "email": "Email Address",
+    "password": "Password",
+    "signin": "Sign In",
+    "signin_loading": "Signing in...",
+    "demo": "Try Demo Account",
+    "signup": "Sign up here",
+    "or": "or",
+    "footer": "Don't have an account?",
+    "welcome": "Welcome to ETERNELLES",
+    "welcome_subtitle": "A curated workspace for modeling portfolios and castings",
+    "features": {
+      "analytics": "Casting analytics",
+      "insights": "Portfolio insights",
+      "security": "Verified partnerships",
+      "access": "Mobile-first access"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "explore": "Explore",
+    "creators": "Creators",
+    "about": "About",
+    "events": "Our Events",
+    "creators": "Our Creators",
+    "talents": "Our Talents",
+    "universe": "The ETERNELLES Universe",
+    "discover": "Discover",
+    "dashboard": "Dashboard",
+    "logout": "Logout",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "themes": {
+    "aura": "Aura",
+    "auraDesc": "Classic editorial palette",
+    "atelier": "Atelier",
+    "atelierDesc": "Studio-inspired neutrals",
+    "ivory": "Ivory",
+    "ivoryDesc": "Soft light surfaces",
+    "noir": "Noir",
+    "noirDesc": "Moody sophistication"
+  },
+  "roles": {
+    "admin": "System Admin",
+    "manager": "Platform Admin",
+    "moderator": "Platform Moderator",
+    "premium": "Premium Model",
+    "free": "Standard Model",
+    "demo": "Demo Profile"
+  },
+  "sections": {
+    "featuredEvents": "Featured Events",
+    "featuredCreators": "Featured Creators",
+    "featuredTalents": "Featured Talents",
+    "welcome": "Welcome to ETERNELLES",
+    "spotlight": "In the spotlight",
+    "spotlightSubtitle": "A curated selection of rising and established talent.",
+    "events": "Our Events",
+    "eventsSubtitle": "Runways, showcases, and casting moments.",
+    "creators": "Our Creators",
+    "creatorsSubtitle": "Designers, art directors, and studios.",
+    "talents": "Our Talents",
+    "talentsSubtitle": "The faces shaping the next season.",
+    "universe": "The ETERNELLES Universe",
+    "universeCopy": "Beyond a portfolio, ETERNELLES connects you to curated castings, verified partners, and a lasting digital presence that evolves with your career.",
+    "universeCta": "Create my book",
+    "discoverTalents": "Discover our talents",
+    "discoverSubtitle": "Meet the faces shaping the next season of fashion.",
+    "discoverCta": "Explore the roster"
+  },
+  "labels": {
+    "specializing": "Specializing in Fashion & Design",
+    "event": "Event",
+    "creator": "Creator",
+    "talent": "Talent",
+    "featuredRole": "Editorial & runway talent"
+  },
+  "cta": {
+    "getStarted": "Get Started",
+    "login": "Sign In"
+  },
+  "errors": {
+    "networkError": "Network error. Please check your connection.",
+    "invalidCredentials": "Invalid email or password",
+    "loginFailed": "Login failed. Please try again."
+  },
+  "analytics": {
+    "title": "Insights & Bookings"
+  },
+  "stats": {
+    "activeUsers": "Active Talents",
+    "activeUsersChange": "↑ 12% this month",
+    "projects": "Castings",
+    "projectsChange": "↑ 3% this month",
+    "uptime": "Availability",
+    "uptimeStatus": "Excellent",
+    "userRating": "Partner Rating"
+  },
+  "settings": {
+    "title": "Account Settings",
+    "themeSelector": "Theme Selector",
+    "themeSelectorDesc": "Choose your preferred workspace theme",
+    "profile": "Profile Information",
+    "name": "Name",
+    "role": "Role",
+    "editProfile": "Edit Profile",
+    "security": "Security Settings",
+    "password": "Password",
+    "passwordHint": "Last changed 3 months ago",
+    "mfa": "Two-Factor Authentication",
+    "mfaStatus": "Not enabled",
+    "updateSecurity": "Update Security",
+    "preferences": "Preferences",
+    "theme": "Theme",
+    "themeDefault": "Dark Mode",
+    "notifications": "Notifications",
+    "notificationsStatus": "Enabled",
+    "managePreferences": "Manage Preferences",
+    "dangerZone": "Danger Zone",
+    "dangerDesc": "Irreversible actions",
+    "deleteAccount": "Delete Account"
+  },
+  "admin": {
+    "features": {
+      "governance": "Platform Governance",
+      "governance_desc": "Oversee policy, compliance, and access",
+      "ecosystem": "Ecosystem Oversight",
+      "ecosystem_desc": "Coordinate partners and editorial standards",
+      "quality": "Quality Assurance",
+      "quality_desc": "Protect the integrity of talent profiles",
+      "partners": "Partner Network",
+      "partners_desc": "Manage verified fashion partners",
+      "insights": "Strategic Insights",
+      "insights_desc": "Monitor platform performance and growth"
+    }
+  },
+  "manager": {
+    "features": {
+      "castings": "Casting Orchestration",
+      "castings_desc": "Schedule and manage casting cycles",
+      "workflow": "Booking Workflow",
+      "workflow_desc": "Coordinate briefs, approvals, and placements",
+      "portfolios": "Portfolio Direction",
+      "portfolios_desc": "Guide the editorial presentation of talent",
+      "team": "Team Operations",
+      "team_desc": "Align scouts, stylists, and coordinators"
+    }
+  },
+  "moderator": {
+    "features": {
+      "review": "Content Review",
+      "review_desc": "Validate portfolios and editorials",
+      "rights": "Image Rights",
+      "rights_desc": "Track usage permissions and credits",
+      "safety": "Safety Standards",
+      "safety_desc": "Keep the ecosystem trusted",
+      "feedback": "Feedback Queue",
+      "feedback_desc": "Resolve reports and requests"
+    }
+  },
+  "premium": {
+    "features": {
+      "portfolio": "Portfolio Studio",
+      "portfolio_desc": "Curate editorials and lookbooks",
+      "castings": "Casting Invites",
+      "castings_desc": "Respond to exclusive briefs",
+      "bookings": "Bookings",
+      "bookings_desc": "Manage confirmed placements",
+      "analytics": "Performance Analytics",
+      "analytics_desc": "Track profile reach",
+      "visibility": "Visibility Boost",
+      "visibility_desc": "Priority discovery in searches"
+    }
+  },
+  "free": {
+    "features": {
+      "starter": "Starter Portfolio",
+      "starter_desc": "Launch your digital identity",
+      "applications": "Applications",
+      "applications_desc": "Track your casting submissions"
+    }
+  },
+  "demo": {
+    "features": {
+      "tour": "Guided Tour",
+      "tour_desc": "Explore a sample workspace",
+      "preview": "Portfolio Preview",
+      "preview_desc": "See how your book can look"
+    }
+  },
+  "dashboard": {
+    "title": "ETERNELLES Atelier",
+    "welcome": "Welcome",
+    "eyebrow": "Your workspace",
+    "subtitle": "Curate, manage, and elevate your modeling presence",
+    "workspaces": "Workspaces",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "workspace": "Your Workspace",
+    "newWorkspace": "+ New Workspace",
+    "role": "Role",
+    "theme": "Theme",
+    "widgets": "Widgets",
+    "signOut": "Sign Out"
+  },
+  "footer": {
+    "about": "ETERNELLES — The fashion modeling ecosystem.",
+    "aboutSub": "Digital portfolios, castings, and verified partners.",
+    "legal": "Legal",
+    "legalNotice": "Legal notice",
+    "terms": "Terms of use",
+    "privacy": "Privacy policy",
+    "social": "Social Media",
+    "faq": "FAQ",
+    "faqLink": "Frequently asked questions",
+    "booking": "How to book",
+    "services": "Our services"
+  }
+}

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700&family=Lora:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --aura-cream: #F4EFE7;
+  --aura-cream-strong: #EFE5D7;
+  --aura-ink: #1A202C;
+  --aura-slate: #2D3748;
+  --aura-muted: #4A5568;
+  --aura-line: #E6DFD5;
+  --aura-accent: #DBCBB4;
+  --aura-accent-strong: #C7B49A;
+  --aura-white: #FFFFFF;
+
+  font-family: 'Gothic A1', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--aura-ink);
+  background-color: var(--aura-cream);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--aura-cream);
+  color: var(--aura-ink);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Lora', serif;
+  color: var(--aura-ink);
+  letter-spacing: 0.02em;
+}
+
+a {
+  font-weight: 500;
+  color: var(--aura-ink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--aura-muted);
+}
+
+button {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 0.7em 1.6em;
+  font-size: 0.95em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--aura-accent);
+  color: var(--aura-ink);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--aura-accent-strong);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--aura-accent-strong);
+  outline-offset: 2px;
+}
+
+body.theme-aura,
+body.theme-atelier,
+body.theme-ivory,
+body.theme-noir {
+  background: var(--aura-cream);
+  color: var(--aura-ink);
+}
+
+body.theme-noir {
+  background: #f6f1ea;
+}
+
+body.theme-atelier {
+  background: #f3eee7;
+}
+
+body.theme-ivory {
+  background: #f8f4ed;
+}
