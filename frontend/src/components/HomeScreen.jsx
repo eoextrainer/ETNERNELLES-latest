@@ -127,7 +127,7 @@ export default function HomeScreen({ onLoginClick }) {
         <div className="hero-video-wrapper">
           <iframe
             className="hero-video"
-            src={buildEmbedUrl(heroVideo)}
+            src={buildEmbedUrl(heroVideo) + '&start=15'}
             title="ETERNELLES Hero"
             allow="autoplay; encrypted-media; picture-in-picture"
             allowFullScreen
