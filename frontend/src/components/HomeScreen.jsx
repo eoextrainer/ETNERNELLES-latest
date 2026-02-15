@@ -108,9 +108,13 @@ export default function HomeScreen({ onLoginClick }) {
 
         <ul className={`nav-menu ${navOpen ? 'active' : ''}`}>
           <li><a href="#evenements">{t('navigation.events')}</a></li>
+          <li className="nav-separator">|</li>
           <li><a href="#createurs">{t('navigation.creators')}</a></li>
+          <li className="nav-separator">|</li>
           <li><a href="#talents">{t('navigation.talents')}</a></li>
+          <li className="nav-separator">|</li>
           <li><a href="#formulaire">{t('navigation.formulaire')}</a></li>
+          <li className="nav-separator">|</li>
           <li><a href="#kiosk">{t('navigation.kiosk')}</a></li>
           <li>
             <button
