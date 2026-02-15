@@ -21,7 +21,7 @@ git tag $TAG_NAME
 echo "Pushing commits and tags to remote..."
 git push && git push --tags
 echo "Pulling latest changes from remote with automatic conflict resolution..."
-git pull --no-edit -X theirs origin main || {
+git pull --no-edit -X theirs --allow-unrelated-histories origin main || {
   echo "Automatic merge failed, attempting to resolve all conflicts in favor of local changes..."
   git add .
   git commit -am "Auto-resolved merge conflicts in favor of local changes"
