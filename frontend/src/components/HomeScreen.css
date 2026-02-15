@@ -71,23 +71,113 @@
 /* Kiosk Section Placeholder */
 .kiosk-section {
   padding: 40px 10vw 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: var(--aura-cream);
-}
-
-.kiosk-placeholder {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
-  padding: 2.5rem 2.5rem 2rem 2.5rem;
-  max-width: 420px;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
   align-items: center;
+}
+
+.kiosk-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.kiosk-logo {
+  height: 48px;
+  background: #222;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.kiosk-search-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.kiosk-search-bar input {
+  padding: 0.7rem 1.2rem;
+  border: 1px solid var(--aura-line);
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 260px;
+}
+.kiosk-search-bar button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background: var(--aura-accent);
+  color: var(--aura-ink);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.kiosk-categories {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.kiosk-categories button {
+  background: #fff;
+  border: 1px solid var(--aura-line);
+  border-radius: 999px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.98rem;
+  color: var(--aura-ink);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.kiosk-categories button:hover {
+  background: var(--aura-accent);
+  color: #fff;
+}
+
+.kiosk-magazine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+.magazine-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  padding: 1.2rem 1rem 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  transition: box-shadow 0.2s;
+}
+.magazine-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+.magazine-card img {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+.magazine-info {
+  text-align: center;
+}
+.magazine-category {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--aura-accent);
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.magazine-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
 }
 .home-screen {
   width: 100%;

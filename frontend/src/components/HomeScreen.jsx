@@ -244,11 +244,62 @@ export default function HomeScreen({ onLoginClick }) {
         </div>
       </section>
 
-      {/* Placeholder for KIOSK section */}
+      {/* KIOSK section inspired by mon-kiosque.fr */}
       <section className="kiosk-section" id="kiosk">
-        <div className="kiosk-placeholder">
+        <div className="kiosk-header">
+          <img src="https://www.mon-kiosque.fr/images/logos/logo_mon_kiosque_fr_blanc.png" alt="Kiosk Logo" className="kiosk-logo" />
           <h2>KIOSK</h2>
-          <p>Section à venir...</p>
+        </div>
+        <div className="kiosk-search-bar">
+          <input type="text" placeholder="Rechercher un magazine..." />
+          <button type="button">🔍</button>
+        </div>
+        <div className="kiosk-categories">
+          <button>ANIMAUX</button>
+          <button>AUTO</button>
+          <button>SPORT</button>
+          <button>OUTDOOR</button>
+          <button>VOYAGE</button>
+          <button>MER</button>
+          <button>DIVERS</button>
+        </div>
+        <div className="kiosk-magazine-grid">
+          {/* Example magazine cards, replace with real data as needed */}
+          <div className="magazine-card">
+            <img src="https://via.placeholder.com/120x160?text=Magazine+1" alt="Magazine 1" />
+            <div className="magazine-info">
+              <span className="magazine-category">SPORT</span>
+              <h3>Basket Magazine N° 32</h3>
+            </div>
+          </div>
+          <div className="magazine-card">
+            <img src="https://via.placeholder.com/120x160?text=Magazine+2" alt="Magazine 2" />
+            <div className="magazine-info">
+              <span className="magazine-category">ANIMAUX</span>
+              <h3>Spécial Chats N° 69</h3>
+            </div>
+          </div>
+          <div className="magazine-card">
+            <img src="https://via.placeholder.com/120x160?text=Magazine+3" alt="Magazine 3" />
+            <div className="magazine-info">
+              <span className="magazine-category">AUTO</span>
+              <h3>Combi Magazine N° 53</h3>
+            </div>
+          </div>
+          <div className="magazine-card">
+            <img src="https://via.placeholder.com/120x160?text=Magazine+4" alt="Magazine 4" />
+            <div className="magazine-info">
+              <span className="magazine-category">OUTDOOR</span>
+              <h3>Vélo by Trek N° 4</h3>
+            </div>
+          </div>
+          <div className="magazine-card">
+            <img src="https://via.placeholder.com/120x160?text=Magazine+5" alt="Magazine 5" />
+            <div className="magazine-info">
+              <span className="magazine-category">VOYAGE</span>
+              <h3>Grands Reportages N° 548</h3>
+            </div>
+          </div>
         </div>
       </section>
 
