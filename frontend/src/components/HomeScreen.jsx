@@ -247,7 +247,7 @@ export default function HomeScreen({ onLoginClick }) {
         </div>
         <div className="kiosk-section" id="kiosk">
           <div className="kiosk-header">
-            <h2>KIOSK</h2>
+            <h2>ETERNELLES MAGAZINE</h2>
           </div>
           <div className="kiosk-magazine-grid single">
             <div className="magazine-card">
