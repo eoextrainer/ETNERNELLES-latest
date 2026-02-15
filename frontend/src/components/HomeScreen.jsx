@@ -115,8 +115,6 @@ export default function HomeScreen({ onLoginClick }) {
             <li><a href="#talents">{t('navigation.talents')}</a></li>
             <li className="nav-separator">|</li>
             <li><a href="#formulaire">{t('navigation.formulaire')}</a></li>
-            <li className="nav-separator">|</li>
-            <li><a href="#kiosk">{t('navigation.kiosk')}</a></li>
           </ul>
         </div>
 
@@ -196,7 +194,8 @@ export default function HomeScreen({ onLoginClick }) {
           title={t('sections.talents')}
           subtitle={t('sections.talentsSubtitle')}
           videos={talentsVideos}
-          startAt={10}
+          startAt={20}
+          endOffset={10}
         />
       </section>
 
@@ -250,7 +249,7 @@ export default function HomeScreen({ onLoginClick }) {
             <h2>ETERNELLES MAGAZINE</h2>
           </div>
           <div className="kiosk-magazine-grid single">
-            <div className="magazine-card">
+            <div className="magazine-card enlarged">
               <img src="https://via.placeholder.com/120x160?text=Magazine+1" alt="Magazine 1" />
               <div className="magazine-info">
                 <span className="magazine-category">SPORT</span>

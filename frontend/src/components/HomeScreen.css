@@ -190,6 +190,10 @@
   border-radius: 8px;
   margin-bottom: 0.5rem;
 }
+.magazine-card.enlarged img {
+  width: 203px;
+  height: 270px;
+}
 .magazine-info {
   text-align: center;
 }
