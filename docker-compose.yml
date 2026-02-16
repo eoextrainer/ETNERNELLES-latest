@@ -1,0 +1,59 @@
+# Docker Compose file for ETNERNELLES project
+# This will run the database, backend, and frontend in separate containers
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: eternelles-db
+    restart: always
+    environment:
+      POSTGRES_DB: eternelles
+      POSTGRES_USER: explorer
+      POSTGRES_PASSWORD: eoex_password
+    ports:
+      - "55432:5432"
+    volumes:
+      - eternelles_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U explorer -d eternelles"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+    container_name: eternelles-backend
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      DB_NAME: eternelles
+      DB_USER: explorer
+      DB_PASSWORD: eoex_password
+      DB_HOST: db
+      DB_PORT: 5432
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ../.venv:/app/.venv
+    working_dir: /app
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: eternelles-frontend
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "5173"]
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+    working_dir: /app
+    depends_on:
+      - backend
+
+volumes:
+  eternelles_db_data:
