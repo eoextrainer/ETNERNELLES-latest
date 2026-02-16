@@ -1,4 +1,24 @@
 {
+  "registration": {
+    "title": "Registration",
+    "prenom": "First Name",
+    "nom": "Last Name",
+    "email": "Email",
+    "ville": "City",
+    "pays": "Country",
+    "category": "Category",
+    "categoryOptions": {
+      "spectateur": "Spectator",
+      "vip": "VIP",
+      "sponsor": "Sponsor",
+      "talent": "Talent",
+      "direction": "Direction",
+      "media": "Photo & Media"
+    },
+    "submit": "Sign up",
+    "success": "Registration successful! Redirecting...",
+    "loading": "Loading..."
+  },
   "app": {
     "title": "ETERNELLES — The Fashion Modeling Ecosystem",
     "tagline": "Create your digital identity"

@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { getApiBaseUrl } from '../config/api';
 import { useTranslation } from 'react-i18next';
 import './HomeScreen.css';
 
@@ -88,6 +89,58 @@ export default function HomeScreen({ onLoginClick }) {
   const talentsVideos = useMemo(() => [
     'https://www.youtube.com/watch?v=lXWJ6xY14x0&pp=ygU2d29tZW4gZmFzaGlvbiBtb2RlbGxpbmcgcnVud2F5IHNob3cgc2hvd2Nhc2UgZGVtbyByZWVs'
   ], []);
+
+  // Registration form state
+  const [formData, setFormData] = useState({
+    prenom: '',
+    nom: '',
+    email: '',
+    ville: '',
+    pays: '',
+    category: '',
+  });
+  const [formLoading, setFormLoading] = useState(false);
+  const [formError, setFormError] = useState('');
+  const [formSuccess, setFormSuccess] = useState(false);
+
+  // Handle registration form change
+  const handleFormChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle registration form submit
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setFormLoading(true);
+    setFormError('');
+    setFormSuccess(false);
+    try {
+      const apiBase = getApiBaseUrl();
+      const res = await fetch(`${apiBase}/v1/users`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          prenom: formData.prenom,
+          nom: formData.nom,
+          email: formData.email,
+          ville: formData.ville,
+          pays: formData.pays,
+          category: formData.category,
+        }),
+      });
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.detail || 'Registration failed');
+      }
+      setFormSuccess(true);
+      // Optionally redirect to workspace or show success message
+      window.location.href = '/dashboard';
+    } catch (err) {
+      setFormError(err.message);
+    } finally {
+      setFormLoading(false);
+    }
+  };
 
   return (
     <div className="home-screen">
@@ -277,40 +330,43 @@ export default function HomeScreen({ onLoginClick }) {
         <div className="form-section" id="formulaire">
           <div className="form-card">
             <h2>{t('registration.title')}</h2>
-            <form>
+            <form onSubmit={handleFormSubmit}>
               <div className="form-row">
                 <label htmlFor="prenom">{t('registration.prenom')}</label>
-                <input type="text" id="prenom" name="prenom" required />
+                <input type="text" id="prenom" name="prenom" required value={formData.prenom} onChange={handleFormChange} />
               </div>
               <div className="form-row">
                 <label htmlFor="nom">{t('registration.nom')}</label>
-                <input type="text" id="nom" name="nom" required />
+                <input type="text" id="nom" name="nom" required value={formData.nom} onChange={handleFormChange} />
               </div>
               <div className="form-row">
                 <label htmlFor="email">{t('registration.email')}</label>
-                <input type="email" id="email" name="email" required />
+                <input type="email" id="email" name="email" required value={formData.email} onChange={handleFormChange} />
               </div>
               <div className="form-row">
                 <label htmlFor="ville">{t('registration.ville')}</label>
-                <input type="text" id="ville" name="ville" required />
+                <input type="text" id="ville" name="ville" required value={formData.ville} onChange={handleFormChange} />
               </div>
               <div className="form-row">
                 <label htmlFor="pays">{t('registration.pays')}</label>
-                <input type="text" id="pays" name="pays" required />
+                <input type="text" id="pays" name="pays" required value={formData.pays} onChange={handleFormChange} />
               </div>
               <div className="form-row">
                 <label htmlFor="category">{t('registration.category')}</label>
-                <select id="category" name="category" required>
+                <select id="category" name="category" required value={formData.category} onChange={handleFormChange}>
                   <option value="">--</option>
                   <option value="spectateur">{t('registration.categoryOptions.spectateur')}</option>
                   <option value="vip">{t('registration.categoryOptions.vip')}</option>
                   <option value="sponsor">{t('registration.categoryOptions.sponsor')}</option>
                   <option value="talent">{t('registration.categoryOptions.talent')}</option>
                   <option value="direction">{t('registration.categoryOptions.direction')}</option>
+                  <option value="media">{t('registration.categoryOptions.media')}</option>
                 </select>
               </div>
+              {formError && <div className="form-error" style={{color:'red',marginTop:8}}>{formError}</div>}
+              {formSuccess && <div className="form-success" style={{color:'green',marginTop:8}}>{t('registration.success') || 'Registration successful! Redirecting...'}</div>}
               <div className="form-row">
-                <button type="submit" className="cta-button">{t('registration.submit')}</button>
+                <button type="submit" className="cta-button" disabled={formLoading}>{formLoading ? t('registration.loading') || 'Loading...' : t('registration.submit')}</button>
               </div>
             </form>
           </div>
@@ -334,6 +390,15 @@ export default function HomeScreen({ onLoginClick }) {
                 <div className="pricing-price">80&nbsp;€</div>
                 <div className="pricing-desc">Jusqu'à 10 personnes<br/>Accès valable pour toute la journée<br/>+ espace groupe dédié</div>
               </div>
+            </div>
+            <div style={{marginTop:'2rem',textAlign:'center'}}>
+              <h3 style={{fontSize:'1.3rem',fontWeight:'700',marginBottom:'0.7rem'}}>Horaires de l'événement</h3>
+              <ul style={{listStyle:'none',padding:0,margin:0,fontSize:'1.1rem',color:'#444'}}>
+                <li><strong>Commencement :</strong> 12h</li>
+                <li><strong>Basketball :</strong> 13h - 14h</li>
+                <li><strong>Spectacles :</strong> 14h30 - 16h30</li>
+                <li><strong>Défilé :</strong> 17h - 20h</li>
+              </ul>
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ const SpotlightCard = ({ name, subtitle, imageUrl }) => (
   </div>
 );
 
-export default function WorkspaceScreen({ onBack }) {
+export default function WorkspaceScreen({ user, onBack }) {
   const { t } = useTranslation();
   const [navOpen, setNavOpen] = useState(false);
   return (
@@ -58,6 +58,15 @@ export default function WorkspaceScreen({ onBack }) {
 
       <div className="home-content">
         <button className="back-btn" onClick={onBack}>Back</button>
+
+        {/* User Info Section */}
+        {user && (
+          <section className="user-info-section">
+            <h2>Bienvenue, {user.name || user.username || user.email}!</h2>
+            <p>Email: {user.email}</p>
+            {/* Add more user info fields as needed */}
+          </section>
+        )}
 
         <section className="spotlight-section" id="workspace-spotlight">
           <div className="section-heading">

@@ -71,7 +71,8 @@ export const getApiBaseUrl = () => {
         return normalized;
       }
     }
-    return '/api';
+    // Fallback: use http://localhost:8000/v1 for local dev
+    return 'http://localhost:8000/v1';
   }
 
   if (isApiBaseLocked()) {

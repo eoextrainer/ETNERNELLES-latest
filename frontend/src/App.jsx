@@ -74,7 +74,7 @@ function App() {
         )}
 
         {currentPage === 'workspace' && (
-          <WorkspaceScreen onBack={() => setCurrentPage('home')} />
+          <WorkspaceScreen user={user} onBack={() => setCurrentPage('home')} />
         )}
         
         {/* LoginPage removed */}

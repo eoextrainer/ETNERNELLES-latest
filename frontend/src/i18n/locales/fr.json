@@ -68,9 +68,12 @@
         "vip": "VIP",
         "sponsor": "Sponsor",
         "talent": "Talent",
-        "direction": "Direction"
+        "direction": "Direction",
+        "media": "Photo et Médias"
       },
-      "submit": "S'inscrire"
+      "submit": "S'inscrire",
+      "success": "Inscription réussie ! Redirection...",
+      "loading": "Chargement..."
     },
   "themes": {
     "aura": "Aura",
