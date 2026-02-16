@@ -46,7 +46,8 @@ const VideoCarousel = ({ title, subtitle, videos, startAt }) => {
 
 const modelImageMap = import.meta.glob('../../../tmp/models/*.{webp,png,jpg,jpeg}', {
   eager: true,
-  as: 'url',
+  query: '?url',
+  import: 'default',
 });
 const modelImages = Object.entries(modelImageMap)
   .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
@@ -175,8 +176,6 @@ export default function HomeScreen({ onLoginClick }) {
         <div className="nav-login-group" style={{ marginLeft: 'auto' }}>
           <button
             className="ghost-button"
-            onMouseOver={e => { e.currentTarget.style.color = 'black'; }}
-            onMouseOut={e => { e.currentTarget.style.color = ''; }}
             onClick={onLoginClick}
             type="button"
           >

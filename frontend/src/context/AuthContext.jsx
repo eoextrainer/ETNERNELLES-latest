@@ -30,6 +30,7 @@ export function AuthProvider({ children }) {
     try {
       setLoading(true);
       setError(null);
+      console.log('[AuthContext] Attempting login for', email);
 
       const candidates = getApiBaseCandidates();
       let response;
@@ -62,6 +63,7 @@ export function AuthProvider({ children }) {
       }
 
       if (lastError) {
+        console.log('[AuthContext] Login failed:', lastError);
         throw lastError;
       }
       
@@ -74,10 +76,12 @@ export function AuthProvider({ children }) {
       
       setToken(data.access_token);
       setUser(data.user);
+      console.log('[AuthContext] Login success, user set:', data.user);
       
       return data.user;
     } catch (err) {
       setError(err.message);
+      console.log('[AuthContext] Login error:', err);
       throw err;
     } finally {
       setLoading(false);

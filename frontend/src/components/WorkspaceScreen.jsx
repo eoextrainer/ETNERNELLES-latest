@@ -4,7 +4,8 @@ import './HomeScreen.css';
 
 const modelImageMap = import.meta.glob('../../../tmp/models/*.{webp,png,jpg,jpeg}', {
   eager: true,
-  as: 'url',
+  query: '?url',
+  import: 'default',
 });
 const modelImages = Object.entries(modelImageMap)
   .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
@@ -58,6 +59,21 @@ export default function WorkspaceScreen({ user, onBack }) {
 
       <div className="home-content">
         <button className="back-btn" onClick={onBack}>Back</button>
+        {user && (
+          <div className="user-info-table-wrapper" style={{margin:'2rem 0'}}>
+            <h2 style={{textAlign:'center'}}>Mes informations</h2>
+            <table className="user-info-table" style={{margin:'0 auto',borderCollapse:'collapse',background:'#fff',borderRadius:'12px',boxShadow:'0 2px 12px rgba(0,0,0,0.08)'}}>
+              <tbody>
+                <tr><th style={{textAlign:'left',padding:'8px'}}>Prénom</th><td style={{padding:'8px'}}>{user.prenom}</td></tr>
+                <tr><th style={{textAlign:'left',padding:'8px'}}>Nom</th><td style={{padding:'8px'}}>{user.nom}</td></tr>
+                <tr><th style={{textAlign:'left',padding:'8px'}}>Email</th><td style={{padding:'8px'}}>{user.email}</td></tr>
+                <tr><th style={{textAlign:'left',padding:'8px'}}>Ville</th><td style={{padding:'8px'}}>{user.ville}</td></tr>
+                <tr><th style={{textAlign:'left',padding:'8px'}}>Pays</th><td style={{padding:'8px'}}>{user.pays}</td></tr>
+                <tr><th style={{textAlign:'left',padding:'8px'}}>Catégorie</th><td style={{padding:'8px'}}>{user.category}</td></tr>
+              </tbody>
+            </table>
+          </div>
+        )}
 
         {/* User Info Section */}
         {user && (

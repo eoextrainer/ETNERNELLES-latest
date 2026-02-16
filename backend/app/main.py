@@ -1,3 +1,52 @@
+from fastapi.security import OAuth2PasswordRequestForm
+from pydantic import BaseModel, EmailStr
+import hashlib
+
+class LoginRequest(BaseModel):
+    email: EmailStr
+    password: str
+
+# Simple password hashing for demonstration (replace with bcrypt/argon2 in production)
+def hash_password(password: str) -> str:
+    return hashlib.sha256(password.encode()).hexdigest()
+
+@router.post("/login")
+def login_user(login: LoginRequest):
+    try:
+        conn = psycopg2.connect(
+            dbname=DB_NAME,
+            user=DB_USER,
+            password=DB_PASSWORD,
+            host=DB_HOST,
+            port=DB_PORT
+        )
+        cur = conn.cursor()
+        cur.execute(
+            """
+            SELECT id, prenom, nom, email, ville, pays, category, password FROM inscription WHERE email = %s
+            """,
+            (login.email,)
+        )
+        user = cur.fetchone()
+        cur.close()
+        conn.close()
+        if not user:
+            raise HTTPException(status_code=401, detail="Invalid email or password")
+        # Password check (plain for demo, hash in production)
+        db_password = user[7]
+        if login.password != db_password:
+            raise HTTPException(status_code=401, detail="Invalid email or password")
+        return {
+            "id": user[0],
+            "prenom": user[1],
+            "nom": user[2],
+            "email": user[3],
+            "ville": user[4],
+            "pays": user[5],
+            "category": user[6]
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 from fastapi import FastAPI, HTTPException, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
