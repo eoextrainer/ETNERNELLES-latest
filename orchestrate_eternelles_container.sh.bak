@@ -1,0 +1,114 @@
+#!/bin/bash
+# orchestrate_eternelles_container.sh
+set -euo pipefail
+
+REPO_URL="https://github.com/eoextrainer/ETNERNELLES-latest.git"
+APP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BACKUP_SCRIPT="$APP_DIR/orchestrate_eternelles_container.sh.bak"
+FRONTEND_URL="http://localhost:5173"
+STABLE_TAG="stable"
+
+function backup_script() {
+  cp "$0" "$BACKUP_SCRIPT"
+  git add "$BACKUP_SCRIPT"
+  git commit -m "chore: backup container orchestration script" || true
+  git push || true
+}
+
+function menu() {
+  clear
+  echo "╔════════════════════════════════════════════════════╗"
+  echo "║ ETERNELLES Orchestration Menu (container)         ║"
+  echo "╠════════════════════════════════════════════════════╣"
+  echo "║ 1. Power Up App                                   ║"
+  echo "║ 2. Power Down App                                 ║"
+  echo "║ 3. Restore from Stable Version                    ║"
+  echo "║ 4. Run Full Test Suite                            ║"
+  echo "║ 5. View Logs                                      ║"
+  echo "║ 6. Exit                                           ║"
+  echo "╚════════════════════════════════════════════════════╝"
+  read -p "Select an option [1-6]: " opt
+  case $opt in
+    1) power_up ;;
+    2) power_down ;;
+    3) restore_stable ;;
+    4) run_tests ;;
+    5) view_logs ;;
+    6) exit 0 ;;
+    *) echo "Invalid option"; sleep 1; menu ;;
+  esac
+}
+
+function power_down() {
+  echo "Gracefully stopping all services..."
+  docker compose down || true
+  pkill -f uvicorn || true
+  pkill -f vite || true
+  pkill -f node || true
+  pkill -f python || true
+  echo "All services stopped."
+  sleep 2
+  menu
+}
+
+function power_up() {
+  echo "Bringing up ETERNELLES stack..."
+  git fetch --all
+  git checkout main
+  git pull
+  latest_tag=$(git tag --list 'stable-*' | sort | tail -1)
+  if [ -n "$latest_tag" ]; then
+    git checkout "$latest_tag"
+  fi
+  docker compose up -d --build
+  sleep 5
+  docker compose exec db psql -U explorer -d eternelles -c 'SELECT 1;' || restore_stable
+  docker compose exec backend python3 /app/app/seed_db.py || true
+  sleep 2
+  run_tests || restore_stable
+  echo "Opening frontend in Firefox (if available)..."
+  (command -v firefox >/dev/null 2>&1 && nohup firefox "$FRONTEND_URL" >/dev/null 2>&1 &) || true
+  echo "App is up and running!"
+  sleep 2
+  menu
+}
+
+function restore_stable() {
+  echo "Restoring from latest stable version..."
+  git fetch --all
+  for tag in $(git tag --list 'stable-*' | sort -r); do
+    git checkout "$tag" && docker compose up -d --build && run_tests && break
+  done
+  if ! curl -s "$FRONTEND_URL" >/dev/null; then
+    echo "Restoring from remote stable repo..."
+    cd /tmp && rm -rf ETNERNELLES-latest
+    git clone "$REPO_URL"
+    cp -r /tmp/ETNERNELLES-latest/* "$APP_DIR"/
+    cd "$APP_DIR"
+    docker compose up -d --build
+    run_tests
+  fi
+  echo "Restoration complete."
+  sleep 2
+  menu
+}
+
+function run_tests() {
+  echo "Running full test suite..."
+  users=("testuser@example.com" "educ1.eoex@gmail.com" "sgrosset@gmail.com" "me@you.com")
+  for email in "${users[@]}"; do
+    curl -s -X POST http://localhost:8000/api/v1/login -H "Content-Type: application/json" -d "{\"email\":\"$email\",\"password\":\"Password123\"}" | grep -q 'email' || return 1
+  done
+  echo "All user login tests passed."
+  return 0
+}
+
+function view_logs() {
+  echo "Showing docker compose logs (Ctrl+C to exit)..."
+  docker compose logs -f
+  menu
+}
+
+# Always backup script before running
+backup_script
+menu
